@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#viewport {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#header {
+    flex: 1 0 0;
+    max-height: 48px;
+    display: flex;
+}
+
+.subheader {
+    flex: 1 0 0;
+}
+
+#pane-container {
+    flex: 1 0 0;
+    display: flex;
+}
+
+.pane {
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.pane-component {
+    flex: 1 0 0;
+}
