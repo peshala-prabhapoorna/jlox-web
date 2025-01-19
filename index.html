@@ -5,11 +5,41 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>jLox</title>
         <link rel="stylesheet" href="css/layout.css">
+        <link rel="stylesheet" href="css/header.css">
     </head>
     <body>
     <div id="viewport">
         <div id="header">
-            <div id="header-left" class="subheader"></div>
+            <div id="header-left" class="subheader">
+                <div id="logo-div">
+                    <img id="logo-img" src="assets/images/jlox-logo.webp">
+                </div>
+
+                <div class="header-button-set">
+                    <!-- Learn Lox Button -->
+                    <button class="header-button" aria-label="Problem List">
+                        <svg class="header-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
+                        </svg>
+                        <div class="header-button-text">Learn Lox</div>
+                    </button>
+
+                    <!-- Back Button -->
+                    <button class="header-button" aria-label="Back">
+                        <svg class="header-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
+                        </svg>
+                    </button>
+
+                    <!-- Forward Button -->
+                    <button class="header-button" aria-label="Forward">
+                        <svg class="header-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M4 13h12.17l-5.59 5.59L12 20l8-8-8-8-1.41 1.41L16.17 11H4v2z"></path>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
             <div id="header-right" class="subheader"></div>
         </div>
         <div id="pane-container">

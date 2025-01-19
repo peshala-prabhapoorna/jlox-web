@@ -4,21 +4,20 @@
     box-sizing: border-box;
 }
 
+:root {
+    --black: #0f0f0f;
+    --dark-gray-60: #949494;
+    --dark-gray-100: #f5f5f5;
+    --opacity-white-10: #ffffff0f;
+    --opacity-white-20: #ffffff14;
+    --opacity-white-30: #ffffff1a;
+}
+
 #viewport {
     width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-#header {
-    flex: 1 0 0;
-    max-height: 48px;
-    display: flex;
-}
-
-.subheader {
-    flex: 1 0 0;
 }
 
 #pane-container {
