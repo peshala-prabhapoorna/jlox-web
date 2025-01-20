@@ -8,10 +8,10 @@
 .subheader {
     flex: 1 0 0;
     display: flex;
+    padding: 8px 20px;
 }
 
 #header-left {
-    padding: 8px 20px;
     justify-content: flex-start;
     gap: 24px;
 }
@@ -68,4 +68,31 @@
     margin-left: 6px;
     font-size: 15.5px;
     color: var(--dark-gray-100);
+}
+
+#header-right {
+    justify-content: center;
+}
+
+#header-right .header-button-set {
+    background-color: var(--opacity-white-20);
+}
+
+#header-right .header-button-icon {
+    transform: scale(1.15);
+}
+
+.orange {
+    color: var(--orange);
+    fill: var(--orange);
+}
+
+.green {
+    color: var(--green);
+    fill: var(--green);
+}
+
+.red {
+    color: var(--red);
+    fill: var(--red);
 }
