@@ -1,0 +1,27 @@
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    transform: translateY(-8px);
+}
+
+.header-button:hover .header-tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-tooltip {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-65%) translateY(125%);
+    background-color: var(--dark-gray-40);
+    color: var(--dark-gray-100);
+    font-size: 13px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+}
