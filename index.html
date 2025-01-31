@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/layout.css">
         <link rel="stylesheet" href="css/header.css">
         <link rel="stylesheet" href="css/tooltip.css">
+        <link rel="stylesheet" href="css/pane.css">
     </head>
     <body>
     <div id="viewport">
@@ -74,12 +75,21 @@
             </div>
         </div>
         <div id="pane-container">
-            <div id="pane-left" class="pane">
-                <div id="guide" class="pane-component"></div>
+            <div id="pane-left" class="sub-pane-container">
+                <div id="guide" class="pane">
+                    <div class="pane-top-bar"></div>
+                    <article></article>
+                </div>
             </div>
-            <div id="pane-right" class="pane">
-                <div id="code-editor" class="pane-component"></div>
-                <div id="console-log" class="pane-component"></div>
+            <div id="pane-right" class="sub-pane-container">
+                <div id="code-editor" class="pane">
+                    <div class="pane-top-bar"></div>
+                    <textarea></textarea>
+                </div>
+                <div id="console-log" class="pane">
+                    <div class="pane-top-bar"></div>
+                    <textarea readonly></textarea>
+                </div>
             </div>
         </div>
     </div>
