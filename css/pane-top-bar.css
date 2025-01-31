@@ -1,0 +1,81 @@
+.pane-top-bar {
+    flex: 0 0 0;
+    background-color: var(--dark-gray-30);
+    min-height: 36px;
+    padding: 4px;
+    padding-left: 12px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pane svg {
+    width: 20px;
+    height: 20px;
+}
+
+.pane-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--dark-gray-100);
+}
+
+#code-icon {
+    fill: var(--green);
+    stroke: var(--green);
+    stroke-width: 0.4;
+    fill-rule: evenodd;
+    clip-rule: evenodd;
+}
+
+.output-icon {
+    stroke: var(--green);
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#guide .pane-top-bar {
+    gap: 0px;
+    padding-left: 4px;
+}
+
+.divider {
+    width: 1px;
+    height: 14px;
+    background-color: var(--dark-gray-60);
+}
+
+.guide-btn {
+    color: var(--dark-gray-100);
+    background-color: transparent;
+    padding: 0px 8px;
+    border: none;
+    border-radius: 0;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+#syntax-icon {
+    fill: var(--blue);
+    stroke: var(--blue);
+    stroke-width: 1.4;
+}
+
+.examples-icon {
+    fill: gold;
+}
+
+#challenges-icon {
+    stroke: var(--orange);
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
