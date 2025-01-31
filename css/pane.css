@@ -19,10 +19,6 @@
     border-radius: 8px;
 }
 
-.pane > * {
-    flex: 1 0 0;
-}
-
 #guide {
     flex: 1 0 0;
 }
@@ -36,6 +32,7 @@
 }
 
 .pane textarea {
+    flex: 1 0 0;
     background-color: var(--dark-gray-20);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
@@ -44,14 +41,32 @@
 }
 
 .pane article {
+    flex: 1 0 0;
     background-color: var(--dark-gray-20);
 }
 
 .pane-top-bar {
     flex: 0 0 0;
     background-color: var(--dark-gray-30);
-    height: 28px;
+    height: 36px;
     padding: 4px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.pane-top-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pane svg {
+    width: 20px;
+    height: 20px;
+}
+
+.pane-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: var(--dark-gray-100);
 }
