@@ -39,7 +39,7 @@
 }
 
 #guide .pane-top-bar {
-    gap: 0px;
+    gap: 4px;
     padding-left: 4px;
 }
 
@@ -52,14 +52,25 @@
 .guide-btn {
     color: var(--dark-gray-100);
     background-color: transparent;
-    padding: 0px 8px;
+    padding: 4px 8px;
     border: none;
-    border-radius: 0;
+    border-radius: 8px;
     appearance: none;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.guide-btn:hover {
+    background-color: var(--opacity-white-40);
+    transition: 0.2s;
+}
+
+.active-guide-btn {
+    opacity: 1;
 }
 
 #syntax-icon {
