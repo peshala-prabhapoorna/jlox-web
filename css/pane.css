@@ -31,16 +31,17 @@
     flex: 2 0 0;
 }
 
-.pane textarea {
+#article,
+#code-input,
+#output {
     flex: 1 0 0;
     background-color: var(--dark-gray-20);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
+}
+
+#output {
     border: none;
     resize: none;
 }
 
-.pane article {
-    flex: 1 0 0;
-    background-color: var(--dark-gray-20);
-}

@@ -1,0 +1,9 @@
+#code-input {
+    color: var(--off-white-60);
+    font-family: "Droid Sans Mono", "monospace", monospace;
+    font-size: 14px;
+}
+
+#code-input:focus-visible {
+    outline: none;
+}
