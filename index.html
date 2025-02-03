@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/pane-top-bar.css">
         <link rel="stylesheet" href="css/pane-code.css">
         <link href='https://fonts.googleapis.com/css?family=Droid Sans Mono' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css">
     </head>
     <body>
     <div id="viewport">
@@ -118,7 +118,7 @@
                         </svg>
                         <div class="pane-title">Code</div>
                     </div>
-                    <div id="code-input" contentEditable="true" spellcheck="false"><span style="color:red">fun</span> main() {var xyz = 1234;}</div>
+                    <div id="code-input" contentEditable="true" spellcheck="false"></div>
                 </div>
                 <div id="console-log" class="pane">
                     <div class="pane-top-bar">
@@ -133,6 +133,8 @@
             </div>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="scripts/guideBtns.js"></script>
+    <script src="scripts/highlightLox.js"></script>
     </body>
 </html>
