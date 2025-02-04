@@ -1,7 +1,12 @@
 #code-input {
     color: var(--off-white-60);
+    caret-color: var(--off-white-60);
+    padding: 4px 4px 8px 8px;
     font-family: "Droid Sans Mono", "monospace", monospace;
     font-size: 14px;
+    line-height: 22px;
+    cursor: text;
+    overflow: scroll;
 }
 
 #code-input:focus-visible {

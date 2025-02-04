@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="css/pane.css">
         <link rel="stylesheet" href="css/pane-top-bar.css">
         <link rel="stylesheet" href="css/pane-code.css">
+        <link rel="stylesheet" href="css/scroll-bar.css">
         <link href='https://fonts.googleapis.com/css?family=Droid Sans Mono' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css">
     </head>
@@ -118,7 +119,7 @@
                         </svg>
                         <div class="pane-title">Code</div>
                     </div>
-                    <div id="code-input" contentEditable="true" spellcheck="false"></div>
+                    <pre id="code-input" contentEditable="true" spellcheck="false"><code></code></pre>
                 </div>
                 <div id="console-log" class="pane">
                     <div class="pane-top-bar">
@@ -136,5 +137,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script src="scripts/guideBtns.js"></script>
     <script src="scripts/highlightLox.js"></script>
+    <script src="scripts/codeEditor.js"></script>
     </body>
 </html>
