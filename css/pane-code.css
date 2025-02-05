@@ -7,8 +7,14 @@
     line-height: 22px;
     cursor: text;
     overflow: scroll;
+    display: flex;
 }
 
+#code-input code {
+    flex: 1 0 0;
+}
+
+#code-input code:focus-visible,
 #code-input:focus-visible {
     outline: none;
 }
