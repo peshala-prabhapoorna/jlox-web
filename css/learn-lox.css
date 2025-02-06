@@ -1,0 +1,30 @@
+#learn-lox {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: var(--opacity-black-60);
+    backdrop-filter: blur(0.1rem);
+    position: fixed;
+    transition: 0.2s;
+}
+
+#learn-lox-menu {
+    flex: 1 0 0;
+    background-color: var(--black);
+    max-width: 30vw;
+    max-height: 65vh;
+    width: 30vw;
+    height: 65vh;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#learn-lox-menu-items {
+    flex: 1 0 0;
+}

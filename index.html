@@ -11,10 +11,17 @@
         <link rel="stylesheet" href="css/pane-top-bar.css">
         <link rel="stylesheet" href="css/pane-code.css">
         <link rel="stylesheet" href="css/scroll-bar.css">
+        <link rel="stylesheet" href="css/learn-lox.css">
         <link href='https://fonts.googleapis.com/css?family=Droid Sans Mono' rel='stylesheet'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css">
     </head>
     <body>
+    <div id="learn-lox">
+        <div id="learn-lox-menu">
+            <div id="learn-lox-menu-items">
+            </div>
+        </div>
+    </div>
     <div id="viewport">
         <div id="header">
             <div id="header-left" class="subheader">
@@ -24,7 +31,7 @@
 
                 <div class="header-button-set">
                     <!-- Learn Lox Button -->
-                    <button class="header-button" aria-label="Problem List">
+                    <button id="learn-lox-btn" class="header-button" aria-label="Problem List">
                         <svg class="header-button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                             <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"></path>
                         </svg>
@@ -138,5 +145,6 @@
     <script src="scripts/guideBtns.js"></script>
     <script src="scripts/highlightLox.js"></script>
     <script src="scripts/codeEditor.js"></script>
+    <script src="scripts/learnLox.js"></script>
     </body>
 </html>
