@@ -73,7 +73,7 @@
     opacity: 1;
 }
 
-#syntax-icon {
+.syntax-icon {
     fill: var(--blue);
     stroke: var(--blue);
     stroke-width: 1.4;
@@ -83,7 +83,7 @@
     fill: gold;
 }
 
-#challenges-icon {
+.challenges-icon {
     stroke: var(--orange);
     fill: none;
     stroke-linecap: round;
