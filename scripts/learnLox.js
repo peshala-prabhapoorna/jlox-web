@@ -11,6 +11,8 @@ learnLox.addEventListener('click', () => {
 
 const loxSyntaxSubMenu = document.querySelector('#learn-lox-syntax');
 appendArticleBtnsToMenu(loxSyntaxSubMenu, syntaxArticles);
+const loxExampleSubMenu = document.querySelector('#learn-lox-examples');
+appendArticleBtnsToMenu(loxExampleSubMenu, exampleArticles);
 
 function appendArticleBtnsToMenu(subMenu, articles) {
     for (const article of articles) {
