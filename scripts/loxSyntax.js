@@ -4,7 +4,7 @@ syntaxArticles[0] = {
     title: 'Introduction to the Lox Language',
     type: 'syntax',
     articleHTML: `<h3 id="-introduction-to-the-lox-language-"><strong>Introduction to the Lox Language</strong></h3>
-<p>Lox is a lightweight, dynamically typed scripting language designed for clarity and educational purposes. It combines familiar C-style syntax with modern features like classes, closures, and inheritance. The language is implemented as a <strong>tree-walk interpreter</strong> (as described in <a href="https://craftinginterpreters.com/contents.html"><em>Crafting Interpreters</em></a>), which parses code into an abstract syntax tree (AST) and executes it directly. Lox emphasizes simplicity, making it ideal for learning language design or scripting small projects.  </p>
+<p>Lox is a lightweight, dynamically typed scripting language designed for clarity and educational purposes. It combines familiar C-style syntax with modern features like classes, closures, and inheritance. The language is implemented as a <strong>tree-walk interpreter</strong>, which parses code into an abstract syntax tree (AST) and executes it directly. Lox emphasizes simplicity, making it ideal for learning language design or scripting small projects.  </p>
 <h4 id="-key-features-"><strong>Key Features</strong>:</h4>
 <ul>
 <li><strong>Dynamic Typing</strong>: Variables hold values of any type (no type annotations).  </li>
@@ -12,13 +12,13 @@ syntaxArticles[0] = {
 <li><strong>Class-Based OOP</strong>: Classes with inheritance, methods, and <code>this</code> keyword.  </li>
 <li><strong>Lexical Scoping</strong>: Variables are resolved at compile time based on nested blocks.  </li>
 </ul>
-<h4 id="-three-simple-examples-"><strong>Three Simple Examples</strong>:</h4>
+<h4 id="-three-simple-examples-"><strong>Examples</strong>:</h4>
 <ol>
-<li><p><strong>Hello World</strong>:  </p>
+<li><strong>Hello World</strong>:
 <pre><code class="lang-swift"><span class="hljs-built_in">print</span> <span class="hljs-string">"Hello, Lox!"</span>;  <span class="hljs-comment">// Output: Hello, Lox!</span>
 </code></pre>
 </li>
-<li><p><strong>Function &amp; Loop</strong>:  </p>
+<li><strong>Function &amp; Loop</strong>:
 <pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">countTo</span><span class="hljs-params">(n)</span></span> {
   <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">1</span>; i &lt;= n; i = i + <span class="hljs-number">1</span>) {
     print i;
@@ -27,7 +27,7 @@ syntaxArticles[0] = {
 countTo(<span class="hljs-number">3</span>);  <span class="hljs-comment">// Output: 1 2 3</span>
 </code></pre>
 </li>
-<li><p><strong>Class &amp; Object</strong>:  </p>
+<li><strong>Class &amp; Object</strong>:
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Greeter</span> </span>{
   sayHello() {
     <span class="hljs-built_in">print</span> <span class="hljs-string">"Hello from Greeter!"</span>;
