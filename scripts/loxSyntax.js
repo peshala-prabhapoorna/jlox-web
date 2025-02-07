@@ -207,8 +207,6 @@ syntaxArticles[5] = {
   print j;  // <span class="hljs-number">0</span>, <span class="hljs-number">1</span>
 }
 </code></pre>
-<hr>
-<p>Here’s the continuation of the lessons, fully covering <strong>Lessons 6–9</strong> with detailed explanations and examples:  </p>
 `,
 }
 
