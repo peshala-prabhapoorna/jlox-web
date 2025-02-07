@@ -14,17 +14,17 @@
 #learn-lox-menu {
     flex: 1 0 0;
     background-color: var(--black);
-    max-width: 30vw;
+    max-width: 22vw;
     max-height: 65vh;
-    width: 30vw;
     height: 65vh;
     border-radius: 8px;
-    padding: 16px;
+    padding: 24px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: stretch;
     flex-direction: column;
     gap: 8px;
+    overflow-y: scroll;
 }
 
 .learn-lox-submenu {
@@ -48,6 +48,7 @@
     justify-content: center;
     align-items: center;
     gap: 4px;
+    margin-bottom: 8px;
 }
 
 .learn-lox-submenu-title svg {
@@ -56,6 +57,7 @@
 
 .learn-lox-btn {
     flex: 1 0 0;
+    align-items: stretch;
     background-color: transparent;
     color: var(--off-white-60);
     padding: 4px 16px;
@@ -67,6 +69,10 @@
 
 .learn-lox-btn:hover {
     background-color: var(--opacity-white-40);
-    border-radius: 8px;
+    border-radius: 4px;
     transition: 0.2s;
+}
+
+#learn-lox-menu::-webkit-scrollbar-track {
+    margin: 8px 8px 8px 8px;
 }
