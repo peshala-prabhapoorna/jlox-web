@@ -6,6 +6,9 @@ const articleSpace = document.querySelector('#article');
 
 const articleArray = [...syntaxArticles, ...exampleArticles, ...challengeArticles];
 let currentArticleIndex;
+let currentSyntaxArticleIndex = 0;
+let currentExampleArticleIndex = 0;
+let currentChalleneArticleIndex = 0;
 
 const introductionArticle = syntaxArticles[0];
 currentArticleIndex = 0;
@@ -25,7 +28,10 @@ learnLoxPrevBtn.addEventListener('click', () => {
         return;
     }
     currentArticleIndex--;
-    articleSpace.innerHTML = articleArray[currentArticleIndex].articleHTML;
+    const newArticle = articleArray[currentArticleIndex];
+    setCurrentArticleTypeIndex(newArticle);
+    activateArticleTypeGuideBtn(newArticle.type);
+    articleSpace.innerHTML = newArticle.articleHTML;
     highlightArticleLoxCode();
 });
 
@@ -34,7 +40,10 @@ learnLoxNextBtn.addEventListener('click', () => {
         return;
     }
     currentArticleIndex++;
-    articleSpace.innerHTML = articleArray[currentArticleIndex].articleHTML;
+    const newArticle = articleArray[currentArticleIndex];
+    setCurrentArticleTypeIndex(newArticle);
+    activateArticleTypeGuideBtn(newArticle.type);
+    articleSpace.innerHTML = newArticle.articleHTML;
     highlightArticleLoxCode();
 });
 
@@ -53,8 +62,10 @@ function appendArticleBtnsToMenu(subMenu, articles) {
 
         btn.addEventListener('click', () => {
             articleSpace.innerHTML = article.articleHTML;
+            activateArticleTypeGuideBtn(article.type);
             highlightArticleLoxCode();
-            setCurrentArticleIndex(article.title);
+            setCurrentArticleIndex(article);
+            setCurrentArticleTypeIndex(article);
         })
 
         subMenu.appendChild(btn);
@@ -71,10 +82,78 @@ function highlightArticleLoxCode() {
     });
 }
 
-function setCurrentArticleIndex(articleTitle) {
+function setCurrentArticleIndex(article) {
+    const articleTitle = article.title;
     for (let i = 0; i < articleArray.length; i++) {
         if (articleArray[i].title === articleTitle) {
             currentArticleIndex = i;
         }
     }
+}
+
+function setCurrentArticleTypeIndex(article) {
+    switch (article.type) {
+        case 'syntax':
+            currentSyntaxArticleIndex = currentArticleIndex;
+            break;
+        case 'example':
+            currentExampleArticleIndex = currentArticleIndex - syntaxArticles.length;
+            break;
+        case 'challenge':
+            currentChalleneArticleIndex = (
+                currentArticleIndex -
+                syntaxArticles.length -
+                exampleArticles.length
+            )
+            break;
+    }
+}
+
+const guideBtns = document.querySelectorAll('.guide-btn');
+guideBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        activateGuideBtn(btn);
+
+        switch (btn.id) {
+            case 'guide-syntax':
+                currentArticleIndex = currentSyntaxArticleIndex;
+                break;
+            case 'guide-examples':
+                currentArticleIndex = syntaxArticles.length + currentExampleArticleIndex;
+                break;
+            case 'guide-challenges':
+                currentArticleIndex = (
+                    syntaxArticles.length +
+                    exampleArticles.length +
+                    currentChalleneArticleIndex
+                );
+                break;
+        }
+        articleSpace.innerHTML = articleArray[currentArticleIndex].articleHTML;
+        highlightArticleLoxCode();
+    });
+});
+
+function activateGuideBtn(btn) {
+    const activeGuideBtn = document.querySelector('.active-guide-btn');
+    activeGuideBtn.classList.remove('active-guide-btn');
+    btn.classList.add('active-guide-btn');
+}
+
+function activateArticleTypeGuideBtn(articleType) {
+    let btnID;
+    switch (articleType) {
+        case 'syntax':
+            btnID = 'guide-syntax';
+            break;
+        case 'example':
+            btnID = 'guide-examples';
+            break;
+        case 'challenge':
+            btnID = 'guide-challenges';
+            break;
+    }
+
+    const btn = document.querySelector(`#${btnID}`);
+    activateGuideBtn(btn);
 }
