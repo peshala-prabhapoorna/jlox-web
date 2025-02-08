@@ -1,5 +1,28 @@
 (async function () {
+    const output = document.querySelector('#output');
+    console.log = (str) => {
+        switch (str) {
+            case 'CheerpJ runtime ready':
+                str = '<span class="output-update">Runtime starting...</span>';
+                break;
+            case 'Jar is loaded, main is starting':
+                str = '<span class="output-update">Runtime ready</span>';
+                break;
+            case '\n':
+                return;
+        }
+        output.innerHTML += `<span class="output-symbol">&gt;</span> <span class="output-text">${str}</span><br>`;
+    }
+
+    output.innerHTML += '<span class="output-symbol">&gt;</span> <span class="output-rt-loading">Loading Runtime: </span><span id="output-rt-percentage"></span><br>';
+    const outputRTPercentage = output.querySelector('#output-rt-percentage');
+    function showPreloadProgress(preloadDone, preloadTotal) {
+        const percentage = (preloadDone * 100) / preloadTotal;
+        outputRTPercentage.textContent = Math.round(percentage * 100) / 100 + '%';
+    }
+
     await cheerpjInit({
+        preloadProgress: showPreloadProgress,
         preloadResources: {
             "/lt/8/jre/lib/javaws.jar": [ 0, 131072, 1441792, 1703936 ],
             "/lt/8/jre/lib/resources.jar": [ 0, 131072, 917504, 1179648 ],
@@ -18,29 +41,10 @@
         }
     });
 
-    const output = document.querySelector('#output');
     const runBtn = document.querySelector('#run-btn');
     runBtn.addEventListener('click', async () => {
-        const logger = console.log;
-
-        console.log = (str) => {
-            switch (str) {
-                case 'CheerpJ runtime ready':
-                    str = '<span class="output-update">Runtime starting...</span>';
-                    break;
-                case 'Jar is loaded, main is starting':
-                    str = '<span class="output-update">Runtime ready</span>';
-                    break;
-                case '\n':
-                    return;
-            }
-            output.innerHTML += `<span class="output-symbol">&gt;</span> <span class="output-text">${str}</span><br>`;
-        }
-
         const loxCodeStr = document.querySelector('#code-input code').textContent;
         cheerpOSAddStringFile('/str/script.lox', loxCodeStr);
         await cheerpjRunJar('/app/assets/packages/jlox-0.1.0.jar', '/str/script.lox');
-
-        console.log = logger;
     });
 })();
