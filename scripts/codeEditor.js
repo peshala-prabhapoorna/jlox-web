@@ -1,6 +1,9 @@
 // set code input width to prevent resizing when content exceeds size
 const codeInput = document.querySelector('#code-input');
-codeInput.style.maxWidth = codeInput.offsetWidth + "px";
+const output = document.querySelector('#output');
+const widthPX = codeInput.offsetWidth + "px";
+codeInput.style.maxWidth = widthPX;
+output.style.maxWidth = widthPX;
 
 const loxCode = document.querySelector('#code-input code');
 loxCode.textContent = `class MyClass {

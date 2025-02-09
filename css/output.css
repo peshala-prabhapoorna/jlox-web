@@ -1,0 +1,35 @@
+.output-symbol {
+    color: var(--dark-gray-60);
+}
+
+.output-log .output-symbol {
+    color: var(--green);
+}
+
+.output-error .output-symbol {
+    color: var(--red-light);
+}
+
+.output-rt-update,
+.output-rt-loading {
+    color: var(--dark-gray-60);
+}
+
+#output-rt-percentage {
+    color: var(--gold-50);
+}
+
+.output-log {
+    color: var(--dark-gray-100);
+}
+
+.output-error {
+    color: var(--red-light);
+}
+
+#output {
+    padding: 4px 8px 8px 8px;
+    overflow: scroll;
+    font-family: "Droid Sans Mono", "monospace", monospace;
+    font-size: 14px;
+}

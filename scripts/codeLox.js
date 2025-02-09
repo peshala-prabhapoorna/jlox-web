@@ -1,20 +1,28 @@
 (async function () {
     const output = document.querySelector('#output');
+    const symbol = '<span class="output-symbol">➤</span>';
     console.log = (str) => {
         switch (str) {
             case 'CheerpJ runtime ready':
-                str = '<span class="output-update">Runtime starting...</span>';
+                str = `<span class="output-rt-update">${symbol} Runtime starting...</span><br>`;
                 break;
             case 'Jar is loaded, main is starting':
-                str = '<span class="output-update">Runtime ready</span>';
+                str = `<span class="output-rt-update">${symbol} Runtime ready</span><br>`;
                 break;
             case '\n':
                 return;
+            default:
+                if (str.match(/^\[line \d+\] Error at '.+': .+\.$/) !== null) {
+                    str = `<span class="output-error">${symbol} ${str}</span><br>`;
+                } else {
+                    str = `<span class="output-log">${symbol} ${str}</span><br>`;
+                }
+                break;
         }
-        output.innerHTML += `<span class="output-symbol">&gt;</span> <span class="output-text">${str}</span><br>`;
+        output.innerHTML += str;
     }
 
-    output.innerHTML += '<span class="output-symbol">&gt;</span> <span class="output-rt-loading">Loading Runtime: </span><span id="output-rt-percentage"></span><br>';
+    output.innerHTML += `<span class="output-rt-loading">${symbol} Loading Runtime: <span id="output-rt-percentage"></span></span><br>`;
     const outputRTPercentage = output.querySelector('#output-rt-percentage');
     function showPreloadProgress(preloadDone, preloadTotal) {
         const percentage = (preloadDone * 100) / preloadTotal;
