@@ -12,7 +12,7 @@
             case '\n':
                 return;
             default:
-                if (str.match(/^\[line \d+\] Error at '.+': .+\.$/) !== null) {
+                if (str.match(/^\[line \d+\] Error at .+: .+\.$/) !== null) {
                     str = `<span class="output-error">${symbol} ${str}</span><br>`;
                 } else {
                     str = `<span class="output-log">${symbol} ${str}</span><br>`;
