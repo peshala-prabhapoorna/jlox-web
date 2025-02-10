@@ -5,6 +5,9 @@ input_file="index.html"
 output_dir="build"
 output_file="$output_dir/index.html"
 
+# Delete existing output file if it exists
+rm -f "$output_file"
+
 # Check if input file exists
 if [ ! -f "$input_file" ]; then
     echo "Error: $input_file not found in current directory"
