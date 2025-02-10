@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>jLox</title>
-        <meta name="description" content="Master the Lox programming language with interactive syntax lessons, example programs, and coding challenges. Write and run Lox code directly in your browser to build a strong understanding of programming fundamentals.">
-        <meta name="keywords" content="Lox programming, learn programming, coding challenges, new programming languages, browser-based coding, run code online, programming fundamentals, syntax lessons, code examples, interactive coding, language implementation, programming language tutorials, code learning platform">
-        <meta name="robots" content="index, follow">
-        <meta name="author" content="RAP Prabhapoorna">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jLox</title>
+    <meta name="description" content="Master the Lox programming language with interactive syntax lessons, example programs, and coding challenges. Write and run Lox code directly in your browser to build a strong understanding of programming fundamentals.">
+    <meta name="keywords" content="Lox programming, learn programming, coding challenges, new programming languages, browser-based coding, run code online, programming fundamentals, syntax lessons, code examples, interactive coding, language implementation, programming language tutorials, code learning platform">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="RAP Prabhapoorna">
 
-        <!-- Essential META Tags -->
-        <meta property="og:title" content="jLox: Learn & Code Lox in Your Browser">
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://jlox.lavenderleit.dev/assets/images/jlox-logo-meta-tag.webp">
-        <meta property="og:url" content="https://jlox.lavenderleit.dev/">
-        <meta name="twitter:card" content="summary_large_image">
-        <!-- Non-Essential, But Recommended -->
-        <meta property="og:description" content="Master the Lox programming language with interactive syntax lessons, example programs, and coding challenges. Write and run Lox code directly in your browser to build a strong understanding of programming fundamentals.">
-        <meta property="og:site_name" content="jLox">
-        <meta name="twitter:image:alt" content="Logo of jLox website">
-        <!-- Sharing End-->
+    <!-- Essential META Tags -->
+    <meta property="og:title" content="jLox: Learn & Code Lox in Your Browser">
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://jlox.lavenderleit.dev/assets/images/jlox-logo-meta-tag.webp">
+    <meta property="og:url" content="https://jlox.lavenderleit.dev/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Non-Essential, But Recommended -->
+    <meta property="og:description" content="Master the Lox programming language with interactive syntax lessons, example programs, and coding challenges. Write and run Lox code directly in your browser to build a strong understanding of programming fundamentals.">
+    <meta property="og:site_name" content="jLox">
+    <meta name="twitter:image:alt" content="Logo of jLox website">
+    <!-- Sharing End-->
 
-        <!-- Favicon-->
-        <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
-        <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
-        <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
-        <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
-        <!-- Favicon End-->
+    <!-- Favicon-->
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="assets/images/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest" />
+    <!-- Favicon End-->
 
-        <link class="build-concat-css" rel="stylesheet" href="css/layout.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/header.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/tooltip.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/pane.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/pane-top-bar.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/pane-code.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/scroll-bar.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/learn-lox.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/article.css">
-        <link class="build-concat-css" rel="stylesheet" href="css/output.css">
-        <link href='https://fonts.googleapis.com/css?family=Droid Sans Mono' rel='stylesheet'>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css">
-    </head>
-    <body>
+    <link class="build-concat-css" rel="stylesheet" href="css/layout.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/header.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/tooltip.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/pane.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/pane-top-bar.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/pane-code.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/scroll-bar.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/learn-lox.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/article.css">
+    <link class="build-concat-css" rel="stylesheet" href="css/output.css">
+    <link href='https://fonts.googleapis.com/css?family=Droid Sans Mono' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/atom-one-dark-reasonable.min.css">
+</head>
+<body>
     <div id="learn-lox">
         <div id="learn-lox-menu">
             <div id="learn-lox-syntax" class="learn-lox-submenu">
@@ -205,5 +205,5 @@
     <script class="build-concat-js" src="scripts/resetLox.js"></script>
     <script src="https://cjrtnc.leaningtech.com/3.1/cj3loader.js"></script>
     <script class="build-copy-js" src="scripts/codeLox.js"></script>
-    </body>
+</body>
 </html>
