@@ -53,6 +53,6 @@
     runBtn.addEventListener('click', async () => {
         const loxCodeStr = document.querySelector('#code-input code').textContent;
         cheerpOSAddStringFile('/str/script.lox', loxCodeStr);
-        await cheerpjRunJar('/app/assets/packages/jlox-0.1.0.jar', '/str/script.lox');
+        await cheerpjRunJar('/app/assets/packages/jlox.jar', '/str/script.lox');
     });
 })();
