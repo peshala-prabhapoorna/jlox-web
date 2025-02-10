@@ -42,6 +42,8 @@ loxCode.addEventListener('keyup', (event) => {
         event.key === 'ArrowRight'
     ) return;
 
+    // Do not try to highlight if there is no code
+    if (loxCode.textContent.match(/\s*/)) return;
     handleHighlight(event);
 });
 
