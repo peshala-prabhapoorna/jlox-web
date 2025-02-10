@@ -19,7 +19,7 @@ output_file="$output_dir/styles.css"
 touch "$output_file"
 
 # Extract CSS file paths from HTML and concatenate them
-echo "Concatenating CSS files..."
+echo "Processing CSS files..."
 
 # Use grep to find link tags with the specified class, then extract href values
 css_files=$(grep -o '<link.*class="build-concat-css".*>' index.html | grep -o 'href="[^"]*"' | cut -d'"' -f2)
@@ -33,7 +33,7 @@ fi
 # Process each CSS file
 for css_file in $css_files; do
     if [ -f "$css_file" ]; then
-        echo "Processing: $css_file"
+        echo "Concatenating: $css_file"
         # Add a comment to identify the source file
         echo "/* Source: $css_file */" >> "$output_file"
         cat "$css_file" >> "$output_file"

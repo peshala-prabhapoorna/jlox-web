@@ -19,7 +19,7 @@ output_file="$output_dir/script.js"
 touch "$output_file"
 
 # Process files to be concatenated
-echo "Processing files for concatenation..."
+echo "Processing JavaScript files for concatenation..."
 js_concat_files=$(grep -o '<script.*class="build-concat-js".*>' index.html | grep -o 'src="[^"]*"' | cut -d'"' -f2)
 
 # Concatenate JS files
@@ -35,13 +35,13 @@ if [ -n "$js_concat_files" ]; then
             echo "Warning: JavaScript file not found: $js_file"
         fi
     done
-    echo "Concatenation complete: $output_file"
+    echo "JavaScript concatenation complete. Output file: $output_file"
 else
     echo "No files found for concatenation"
 fi
 
 # Process files to be copied
-echo "Processing files for copying..."
+echo "Processing JavaScript files for copying..."
 js_copy_files=$(grep -o '<script.*class="build-copy-js".*>' index.html | grep -o 'src="[^"]*"' | cut -d'"' -f2)
 
 # Copy JS files
@@ -56,9 +56,7 @@ if [ -n "$js_copy_files" ]; then
             echo "Warning: JavaScript file not found: $js_file"
         fi
     done
-    echo "Copying complete"
+    echo "JavaScript copying complete"
 else
     echo "No files found for copying"
 fi
-
-echo "Build process completed successfully"

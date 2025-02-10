@@ -41,7 +41,7 @@ if [ -n "$css_links" ]; then
 fi
 
 # Process JS concatenation
-echo "Processing JS scripts..."
+echo "Processing JavaScript scripts..."
 # Find all build-concat-js scripts
 js_concat_links=$(grep -n '<script.*class="build-concat-js".*>' "$temp_file" | cut -d: -f1)
 
@@ -63,4 +63,4 @@ sed -i 's/class="build-copy-js" //g' "$temp_file"
 # Move temporary file to final location
 mv "$temp_file" "$output_file"
 
-echo "HTML build complete: $output_file"
+echo "HTML build complete. Output file: $output_file"
