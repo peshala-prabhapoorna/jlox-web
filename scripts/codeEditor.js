@@ -43,7 +43,7 @@ loxCode.addEventListener('keyup', (event) => {
     ) return;
 
     // Do not try to highlight if there is no code
-    if (loxCode.textContent.match(/\s*/)) return;
+    if (loxCode.textContent.match(/^\s*$/) !== null) return;
     handleHighlight(event);
 });
 
