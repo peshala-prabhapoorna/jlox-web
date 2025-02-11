@@ -4,11 +4,10 @@
     console.log = (str) => {
         switch (str) {
             case 'CheerpJ runtime ready':
-                str = `<span class="output-rt-update">${symbol} Runtime starting...</span><br>`;
-                break;
-            case 'Jar is loaded, main is starting':
                 str = `<span class="output-rt-update">${symbol} Runtime ready</span><br>`;
                 break;
+            case 'Jar is loaded, main is starting':
+                return;
             case '\n':
                 return;
             default:
@@ -51,6 +50,7 @@
 
     const runBtn = document.querySelector('#run-btn');
     runBtn.addEventListener('click', async () => {
+        output.innerHTML += `<span class="output-rt-update">${symbol} Runtime starting...</span><br>`;
         const loxCodeStr = document.querySelector('#code-input code').textContent;
         cheerpOSAddStringFile('/str/script.lox', loxCodeStr);
         await cheerpjRunJar('/app/assets/packages/jlox.jar', '/str/script.lox');
