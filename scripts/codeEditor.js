@@ -6,13 +6,13 @@ codeInput.style.maxWidth = widthPX;
 output.style.maxWidth = widthPX;
 
 const loxCode = document.querySelector('#code-input code');
-loxCode.textContent = `class MyClass {
-    fun myFunction(var x) {
-        if (x > 10) {
-            print "Hello, world!";
-            var clock = 12;
-        }
-    }
+loxCode.textContent = `fun fibonacci(n) {
+    if (n <= 1) return n;
+    return fib(n - 2) + fib(n - 1);
+}
+
+for (var i = 0; i < 20; i = i + 1) {
+    print "Term " + i + ": " + fibonacci(i);
 }`;
 highlight(loxCode);
 
