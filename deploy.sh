@@ -8,7 +8,7 @@ if [ $# -ne 1 ]; then
 fi
 
 deploy_dir="$1"
-package_url="https://github.com/peshala-prabhapoorna/jlox/releases/download/v0.2.0/jlox-0.2.0.jar"
+package_url="https://github.com/peshala-prabhapoorna/jlox/releases/download/v1.0.0/jlox-1.0.0.jar"
 assets_packages_dir="assets/packages"
 
 # Check if build directory exists
