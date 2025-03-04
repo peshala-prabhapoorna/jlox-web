@@ -1,5 +1,7 @@
 # jLox for the Browser
 
+![jLox-web screenshot](https://github.com/user-attachments/assets/7f5780da-038c-4319-951a-689e7326b65a)
+
 Run Lox code locally in the browser with jLox interpreter. jLox-web allows you to write and run Lox code directly in your browser, providing an interactive environment for learning and experimenting with the language. The jLox interpreter is available in my [jlox repository](https://github.com/peshala-prabhapoorna/jlox).
 
 ## Deployment
