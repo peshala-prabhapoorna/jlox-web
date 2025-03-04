@@ -29,5 +29,5 @@ To build the project, run the following script:
 To deploy the project, run the following script with the deploy directory as an argument:
 
 ```bash
-./deploy.sh <deploy_directory>
+sudo ./deploy.sh <deploy_directory>
 ```
