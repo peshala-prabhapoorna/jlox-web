@@ -7,7 +7,7 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-deploy_dir="$1"
+deploy_dir="${1%/}"
 package_url="https://github.com/peshala-prabhapoorna/jlox/releases/download/v1.0.0/jlox-1.0.0.jar"
 assets_packages_dir="assets/packages"
 
@@ -75,8 +75,12 @@ if [ -d "assets" ]; then
     cp -r assets "$deploy_dir"
 fi
 
+# Change permissions of deploy directory
+chmod -R 755 "$deploy_dir"
+
 echo "=== Deployment complete ==="
 echo "Files deployed to: $deploy_dir"
+echo "Changed permissions of: $deploy_dir"
 
 # List deployed files for verification
 echo "=== Deployed files ==="
