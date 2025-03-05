@@ -32,17 +32,20 @@ hljs.registerLanguage('lox', (hljs) => {
         ]
     };
 
+    const INHERITANCE = {
+        begin: /</,
+        end: /[{;]/,
+        excludeEnd: true,
+        contains: [hljs.UNDERSCORE_TITLE_MODE]
+    };
+
     const CLASS_DECLARATION = {
         beginKeywords: 'class',
         end: /[{;]/,
         excludeEnd: true,
         contains: [
             hljs.UNDERSCORE_TITLE_MODE,
-            {
-                begin: /</,
-                end: />/,
-                contains: [hljs.UNDERSCORE_IDENT_RE]
-            }
+            INHERITANCE
         ]
     };
 
