@@ -152,7 +152,8 @@ syntaxArticles[4] = {
     articleHTML: `<h3 id="-lesson-4-control-flow-"><strong>Control Flow</strong></h3>
 <h4 id="-conditionals-"><strong>Conditionals</strong></h4>
 <p>Use <code>if</code>/<code>else</code> to branch execution:  </p>
-<pre><code class="lang-swift"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">score</span> &gt;= 90) {
+<pre><code class="lang-swift"><span class="hljs-keyword">var</span> score = <span class="hljs-number">75</span>;
+<span class="hljs-keyword">if</span> (<span class="hljs-keyword">score</span> &gt;= 90) {
   <span class="hljs-keyword">print</span> <span class="hljs-string">"A"</span>;
 } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">score</span> &gt;= 80) {
   <span class="hljs-keyword">print</span> <span class="hljs-string">"B"</span>;
@@ -330,9 +331,14 @@ syntaxArticles[9] = {
     articleHTML: `<h3 id="-lesson-9-advanced-expressions-"><strong>Advanced Expressions</strong></h3>
 <h4 id="-assignment-property-access-"><strong>Assignment &amp; Property Access</strong></h4>
 <p>Assign to variables or object properties:  </p>
-<pre><code class="lang-swift">var person = { <span class="hljs-built_in">name</span>: <span class="hljs-string">"Alice"</span> };  
-person.<span class="hljs-built_in">name</span> = <span class="hljs-string">"Bob"</span>;  
-print person.<span class="hljs-built_in">name</span>; <span class="hljs-comment">// "Bob"</span>
+<pre><code class="lang-swift"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> {
+  <span class="hljs-variable">init</span>(<span class="hljs-variable">name</span>) {
+    <span class="hljs-keyword">this</span><span class="hljs-operator">.</span><span class="hljs-property"></span><span class="hljs-variable">name</span> <span class="hljs-operator">=</span> <span class="hljs-variable">name</span>;
+  }
+}
+<span class="hljs-keyword">var</span> <span class="hljs-variable">person</span> <span class="hljs-operator">=</span> <span class="hljs-variable">Person</span>(<span class="hljs-string">"Alice"</span>);
+<span class="hljs-variable">person</span><span class="hljs-operator">.</span><span class="hljs-property"></span><span class="hljs-variable">name</span> <span class="hljs-operator">=</span> <span class="hljs-string">"Bob"</span>;
+<span class="hljs-built_in">print</span> <span class="hljs-variable">person</span><span class="hljs-operator">.</span><span class="hljs-property"></span><span class="hljs-variable">name</span>; <span class="hljs-comment">// "Bob"</span>
 </code></pre>
 <h4 id="-ternary-operator-"><strong>Ternary Operator</strong></h4>
 <p>Compact conditional logic:  </p>
@@ -391,21 +397,19 @@ syntaxArticles[10] = {
 <p><strong>Example Challenge</strong>:<br>Write a Lox program that creates a <code>Stack</code> class with <code>push</code>, <code>pop</code>, and <code>peek</code> methods.  </p>
 <pre><code class="lang-swift"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Stack</span> </span>{  
   init() {  
-    <span class="hljs-keyword">this</span>.items = [];  
+    <span class="hljs-comment">// ...</span>
   }  
 
   push(item) {  
-    <span class="hljs-keyword">this</span>.items.append(item);  
+    <span class="hljs-comment">// ...</span>
   }  
 
   pop() {  
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.items.count == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> nil;  
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.items.removeLast();  
+    <span class="hljs-comment">// ...</span>
   }  
 
   peek() {  
-    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.items.count == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> nil;  
-    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.items[<span class="hljs-keyword">this</span>.items.count - <span class="hljs-number">1</span>];  
+    <span class="hljs-comment">// ...</span>
   }  
 }
 </code></pre>

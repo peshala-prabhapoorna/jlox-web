@@ -20,15 +20,24 @@ exampleArticles[1] = {
     type: 'example',
     articleHTML: `<h3 id="-prime-number-check-"><strong>Prime Number Check</strong></h3>
 <p>A function that determines whether a given number is prime (only divisible by 1 and itself).</p>
-<pre><code class="lang-swift"><span class="hljs-function"><span class="hljs-keyword">fun</span> <span class="hljs-title">isPrime</span><span class="hljs-params">(n)</span></span> {
-  <span class="hljs-keyword">if</span> (n &lt;= <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
-  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">2</span>; i &lt;= n / <span class="hljs-number">2</span>; i = i + <span class="hljs-number">1</span>) {
-    <span class="hljs-keyword">if</span> (n - (n / i) * i == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;  <span class="hljs-comment">// Simulate modulo</span>
+<pre><code class="lang-swift"><span class="hljs-keyword">fun</span> <span class="hljs-title function_">isDivisible</span>(<span class="hljs-variable">n</span>, <span class="hljs-variable">d</span>) {
+  <span class="hljs-keyword">var</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> <span class="hljs-variable">n</span>;
+  <span class="hljs-keyword">while</span> (<span class="hljs-variable">temp</span> <span class="hljs-operator">&gt;</span> <span class="hljs-number">0</span>) {
+    <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">-</span> <span class="hljs-variable">d</span>;
+  }
+  <span class="hljs-keyword">return</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span><span class="hljs-operator">=</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-keyword">fun</span> <span class="hljs-title function_">isPrime</span>(<span class="hljs-variable">n</span>) {
+  <span class="hljs-keyword">if</span> (<span class="hljs-variable">n</span> <span class="hljs-operator">&lt;</span><span class="hljs-operator">=</span> <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>; <span class="hljs-variable">i</span> <span class="hljs-operator">*</span> <span class="hljs-variable">i</span> <span class="hljs-operator">&lt;</span><span class="hljs-operator">=</span> <span class="hljs-variable">n</span>; <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-variable">i</span> <span class="hljs-operator">+</span> <span class="hljs-number">1</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">isDivisible</span>(<span class="hljs-variable">n</span><span class="hljs-operator">,</span> <span class="hljs-variable">i</span>)) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;
   }
   <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;
 }
-print isPrime(<span class="hljs-number">7</span>);  <span class="hljs-comment">// Output: true</span>
-print isPrime(<span class="hljs-number">4</span>);  <span class="hljs-comment">// Output: false</span>
+
+<span class="hljs-built_in">print</span> <span class="hljs-variable">isPrime</span>(<span class="hljs-number">7</span>);  <span class="hljs-comment">// Output: true</span>
+<span class="hljs-built_in">print</span> <span class="hljs-variable">isPrime</span>(<span class="hljs-number">4</span>);  <span class="hljs-comment">// Output: false</span>
 </code></pre>
 <p>The function checks divisibility up to n/2. Since modulo isn&#39;t available, it simulates it using subtraction and multiplication.</p>
 `,
@@ -92,7 +101,7 @@ exampleArticles[4] = {
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Car</span> &lt; <span class="hljs-title">Vehicle</span> </span>{
   start() {
     <span class="hljs-keyword">super</span>.start();
-    <span class="hljs-built_in">print</span> <span class="hljs-string">"Car accelerating to "</span> + <span class="hljs-keyword">this</span>.speed.toString();
+    <span class="hljs-built_in">print</span> <span class="hljs-string">"Car accelerating to "</span> + <span class="hljs-keyword">this</span>.speed;
   }
 }
 <span class="hljs-keyword">var</span> myCar = Car(<span class="hljs-number">60</span>);
