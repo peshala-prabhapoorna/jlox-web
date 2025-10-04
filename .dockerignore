@@ -1,0 +1,15 @@
+# Git files
+.git
+.gitignore
+
+# Build artifacts
+build/
+packages/
+
+# Documentation and wiki
+wiki/
+README.md
+LICENSE
+
+# CI/CD
+.github/
