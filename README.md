@@ -26,6 +26,40 @@ To build the project, run the following script:
 ./build.sh
 ```
 
+## Docker Instructions
+
+### Build and Run with Docker
+
+Build the Docker image:
+
+```bash
+docker build -t jlox-web .
+```
+
+Run the container:
+
+```bash
+docker run -d -p 8080:80 --name jlox-web jlox-web
+```
+
+The application will be available at `http://localhost:8080`.
+
+### Using Docker Compose
+
+Start the application:
+
+```bash
+docker compose up -d
+```
+
+Stop the application:
+
+```bash
+docker compose down
+```
+
+The application will be available at `http://localhost:8080`.
+
 ## Deployment Instructions
 
 To deploy the project, run the following script with the deploy directory as an argument:
