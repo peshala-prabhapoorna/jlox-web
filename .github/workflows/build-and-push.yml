@@ -35,8 +35,6 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          target: prod
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKERHUB_PROJECT_NAME }}:latest
             ${{ secrets.DOCKER_USERNAME }}/${{ secrets.DOCKERHUB_PROJECT_NAME }}:${{ steps.meta.outputs.SHORT_SHA }}
-            
